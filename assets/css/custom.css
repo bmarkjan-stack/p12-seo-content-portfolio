@@ -1,0 +1,44 @@
+/* Article content */
+.wp-block-post-content {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Headings */
+.wp-block-post-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.wp-block-post-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Paragraphs */
+.wp-block-post-content p {
+    line-height: 1.7;
+}
+
+/* Images */
+.wp-block-post-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .wp-block-post-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .wp-block-post-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .wp-block-post-content h3 {
+        font-size: 1.3rem;
+    }
+}
