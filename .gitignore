@@ -1,0 +1,22 @@
+# WordPress
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+
+# LocalWP
+*.log
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Environment files
+.env
+.env.*
