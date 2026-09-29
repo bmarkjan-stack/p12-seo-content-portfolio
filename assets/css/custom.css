@@ -22,9 +22,11 @@
 }
 
 /* Images */
-.wp-block-post-content img {
-    max-width: 100%;
-    height: auto;
+img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
 }
 
 /* Mobile */
