@@ -1,39 +1,42 @@
-# Sample 2 — Search Intent
+## Search Intent Analysis
 
-## Topic
+### Informational Component
 
-Best Website Features for Small Businesses
+The reader needs explanations of website features.
 
-## Primary Search Intent
+Examples:
 
-Commercial / Investigational
+- What is responsive design?
+- Why does website speed matter?
+- Why does a website need security?
 
-## Target Audience
+### Investigational Component
 
-Small business owners who are researching what features
-their business website should have.
+The reader is comparing which features should be included
+on a small business website.
 
-## Searcher Goal
+Examples:
 
-The reader wants to understand which website features
-are important before creating, redesigning, or purchasing
-a website.
+- Which features are essential?
+- Which features should be prioritized?
+- What should a small business website include?
 
-## Content Goal
+### Commercial Component
 
-Help readers compare important website features and
-understand which features should be prioritized.
-
-## Conversion Goal
-
-Encourage readers to continue exploring the website,
-read related content, or contact the business about
+The reader may be evaluating whether they need professional
 website development services.
 
-## Related User Questions
+The article should provide useful information without
+becoming overly promotional.
 
-- What should a small business website include?
-- What features should a business website have?
-- What makes a good small business website?
-- What website features are important for small businesses?
-- What should I look for when building a business website?
+## Recommended Content Approach
+
+The article will use:
+
+- Clear explanations
+- Feature comparisons
+- Benefits
+- Practical examples
+- Concise recommendations
+- A comparison table
+- A final prioritization section
