@@ -16,6 +16,8 @@ The following features are worth considering when building or improving a small 
 
 A mobile-friendly website adjusts its layout and content to work properly on smartphones, tablets, laptops, and desktop computers. Instead of requiring visitors to zoom in, scroll horizontally, or struggle with small buttons, a responsive website adapts its layout to the available screen size.
 
+This approach is commonly implemented through responsive web design, which allows a website's layout to adapt to different screen sizes.
+
 For small businesses, responsive design is especially important because customers may discover a business through a mobile search or visit its website while away from their computer.
 
 A mobile-friendly design should also consider more than screen size. Text should remain readable, navigation should be easy to use, buttons should have enough space to tap, and images should scale appropriately.
@@ -267,6 +269,12 @@ The right combination depends on the business model. A local service provider ma
 
 The important point is to choose features based on customer needs rather than adding features simply because they are popular.
 
+## Connecting Website Features to Web Applications
+
+Some websites use APIs to connect their frontend interfaces with backend services. For example, a business website may use an API to retrieve information, submit forms, or connect with other applications.
+
+Understanding how these systems communicate can help developers build more interactive websites. For an introduction to this topic, see What Is a REST API and How Does It Work?
+
 ## Conclusion
 
 The best website features for small businesses are not necessarily the most complicated ones. A successful website should make it easy for visitors to understand the business, find useful information, trust the company, and take the next step.
@@ -278,7 +286,3 @@ Before adding new functionality, consider what customers need and what the busin
 A successful small business website should prioritize clarity, usability, accessibility, trust, and measurable business goals.
 
 If you are planning a new business website, start by identifying your most important customer actions and build the website around those goals.
-
-## Related Articles
-
-* [How to Build a Responsive Website](#)

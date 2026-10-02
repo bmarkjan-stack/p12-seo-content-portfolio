@@ -1,6 +1,6 @@
 # What Is a REST API and How Does It Work?
 
-When you use a web application, the information you see often comes from a server. A frontend application needs a way to request data from that server, and an API provides a structured way for software systems to communicate.
+When you use a web application, the information you see often comes from a server. A frontend application needs a way to request data from that server, and an API provides a structured way for software systems to communicate. The frontend itself can also use responsive web design techniques to adapt its interface to different devices.
 
 One commonly used approach is a REST API.
 
@@ -150,9 +150,9 @@ Authentication and authorization should be implemented according to the requirem
 
 ## REST API vs. Traditional Web Pages
 
-A traditional web request may return an HTML document that the browser renders as a page.
+A traditional web request may return an HTML document that the browser renders as a page. A REST API commonly returns structured data that a frontend application can process.
 
-A REST API commonly returns structured data that a frontend application can process.
+These technologies can be combined with other website features to create useful business websites. For example, a small business website may use a frontend interface, forms, APIs, and other features to support customer interactions.
 
 For example:
 

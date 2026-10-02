@@ -134,3 +134,5 @@ Responsive design helps websites provide a usable experience across smartphones,
 Building a responsive website involves more than making a page narrower on mobile devices. A good responsive implementation combines flexible layouts, responsive images, readable typography, mobile-first thinking, and testing across different screen sizes.
 
 By applying these techniques, you can create websites that adapt more effectively to the devices visitors use.
+
+Responsive design is also an important foundation for small business websites, where visitors may access the site from a variety of devices.
