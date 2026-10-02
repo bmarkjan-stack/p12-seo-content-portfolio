@@ -1,0 +1,46 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <rect width="1200" height="630" fill="#f5f5f5"/>
+
+  <rect x="70" y="70" width="1060" height="490"
+        rx="24"
+        fill="#ffffff"
+        stroke="#333333"
+        stroke-width="3"/>
+
+  <text x="600" y="210"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="64"
+        font-weight="bold"
+        fill="#222222">
+    REST API
+  </text>
+
+  <text x="600" y="285"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="38"
+        fill="#444444">
+    How Does It Work?
+  </text>
+
+  <text x="600" y="410"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="34"
+        font-weight="bold"
+        fill="#222222">
+    Client  →  API  →  Server
+  </text>
+
+  <text x="600" y="475"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="24"
+        fill="#666666">
+    HTTP Requests • JSON Responses
+  </text>
+
+</svg>

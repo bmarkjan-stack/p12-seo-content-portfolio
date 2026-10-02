@@ -1,0 +1,157 @@
+<svg width="900" height="970" viewBox="0 0 900 1200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="970" fill="#ffffff"/>
+
+  <text x="450" y="60"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="32"
+        font-weight="bold"
+        fill="#222222">
+    REST API Request and Response Flow
+  </text>
+
+  <!-- Client -->
+  <rect x="250" y="100" width="400" height="100"
+        rx="12"
+        fill="#f5f5f5"
+        stroke="#333333"
+        stroke-width="2"/>
+
+  <text x="450" y="160"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="28"
+        font-weight="bold"
+        fill="#222222">
+    Client
+  </text>
+
+  <!-- HTTP Request -->
+  <line x1="450" y1="200" x2="450" y2="260"
+        stroke="#333333"
+        stroke-width="3"/>
+
+  <polygon points="450,280 438,255 462,255"
+           fill="#333333"/>
+
+  <text x="580" y="245"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        fill="#333333">
+    HTTP Request
+  </text>
+
+  <!-- REST API -->
+  <rect x="250" y="280" width="400" height="100"
+        rx="12"
+        fill="#f5f5f5"
+        stroke="#333333"
+        stroke-width="2"/>
+
+  <text x="450" y="340"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="28"
+        font-weight="bold"
+        fill="#222222">
+    REST API
+  </text>
+
+  <!-- Database Query -->
+  <line x1="450" y1="380" x2="450" y2="440"
+        stroke="#333333"
+        stroke-width="3"/>
+
+  <polygon points="450,460 438,435 462,435"
+           fill="#333333"/>
+
+  <text x="580" y="425"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        fill="#333333">
+    Database Query
+  </text>
+
+  <!-- Database -->
+  <rect x="250" y="460" width="400" height="100"
+        rx="12"
+        fill="#f5f5f5"
+        stroke="#333333"
+        stroke-width="2"/>
+
+  <text x="450" y="520"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="28"
+        font-weight="bold"
+        fill="#222222">
+    Database
+  </text>
+
+  <!-- Data -->
+  <line x1="450" y1="560" x2="450" y2="620"
+        stroke="#333333"
+        stroke-width="3"/>
+
+  <polygon points="450,640 438,615 462,615"
+           fill="#333333"/>
+
+  <text x="580" y="605"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        fill="#333333">
+    Data
+  </text>
+
+  <!-- REST API -->
+  <rect x="250" y="640" width="400" height="100"
+        rx="12"
+        fill="#f5f5f5"
+        stroke="#333333"
+        stroke-width="2"/>
+
+  <text x="450" y="700"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="28"
+        font-weight="bold"
+        fill="#222222">
+    REST API
+  </text>
+
+  <!-- JSON Response -->
+  <line x1="450" y1="740" x2="450" y2="800"
+        stroke="#333333"
+        stroke-width="3"/>
+
+  <polygon points="450,820 438,795 462,795"
+           fill="#333333"/>
+
+  <text x="580" y="785"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        fill="#333333">
+    JSON Response
+  </text>
+
+  <!-- Final Client -->
+  <rect x="250" y="820" width="400" height="100"
+        rx="12"
+        fill="#f5f5f5"
+        stroke="#333333"
+        stroke-width="2"/>
+
+  <text x="450" y="880"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="28"
+        font-weight="bold"
+        fill="#222222">
+    Client
+  </text>
+
+</svg>
