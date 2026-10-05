@@ -37,10 +37,10 @@
 
 /* Images */
 img {
-    width: auto !important;
-    max-width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Comparison table */
