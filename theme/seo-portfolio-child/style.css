@@ -1,0 +1,10 @@
+/*
+Theme Name: SEO Portfolio Child
+Description: Child theme for the SEO Content & Web Development portfolio. Adds a design system (theme.json), block patterns, templates and light motion. Component CSS lives in assets/css/*.css and is printed inline by inc/enqueue.php.
+Template: twentytwentyfive
+Version: 2.0.0
+Requires at least: 6.6
+Requires PHP: 7.4
+Text Domain: seo-portfolio-child
+License: GPL-2.0-or-later
+*/
