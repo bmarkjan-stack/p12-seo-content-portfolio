@@ -1,0 +1,24 @@
+/* Card grids: services, case studies, about */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.card-grid>*{margin-block:0!important}
+@media(max-width:900px){.card-grid{grid-template-columns:1fr}}
+@media(min-width:601px) and (max-width:900px){.card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.card{display:flex;flex-direction:column;gap:.5rem;padding:2rem;background:#fff;border:1px solid var(--spc-line);border-radius:var(--spc-radius);box-shadow:var(--spc-shadow);transition:transform .25s,box-shadow .25s,border-color .25s}
+.card>*{margin-block:0!important}
+.card:hover{transform:translateY(-4px);box-shadow:var(--spc-shadow-lg);border-color:#d6d3f0}
+.card .wp-block-buttons{margin-top:auto!important;padding-top:1.25rem}
+.card h3{margin-top:.75rem!important}
+.card p{font-size:.98rem}
+.card__icon{width:48px;height:48px;border-radius:12px;background:var(--spc-tint);color:var(--spc-accent);display:grid;place-items:center}
+.card__icon svg{width:24px;height:24px}
+/* Case studies */
+.case__tag{align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--spc-accent);background:var(--spc-tint);padding:.25rem .65rem;border-radius:999px}
+.case__facts{list-style:none;margin:.75rem 0 0!important;padding:0;display:grid;gap:.5rem;font-size:.92rem}
+.case__facts li{padding-top:.5rem;border-top:1px solid var(--spc-line)}
+.case__facts strong{color:var(--spc-ink)}
+/* About */
+.about__grid{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.about__grid>*{margin-block:0!important}
+.about__photo img{width:100%;height:auto;border-radius:24px;box-shadow:var(--spc-shadow-lg)}
+.about__list{padding-left:1.2rem}
+@media(max-width:800px){.about__grid{grid-template-columns:1fr}.about__photo{max-width:260px}}

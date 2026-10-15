@@ -1,0 +1,40 @@
+/* Base: tokens, sections, buttons, focus */
+:root{
+	--spc-accent:var(--wp--preset--color--accent);
+	--spc-accent-dark:var(--wp--preset--color--accent-dark);
+	--spc-tint:var(--wp--preset--color--accent-tint);
+	--spc-ink:var(--wp--preset--color--ink);
+	--spc-text:var(--wp--preset--color--ink-soft);
+	--spc-soft:var(--wp--preset--color--surface-soft);
+	--spc-dark:var(--wp--preset--color--dark);
+	--spc-line:var(--wp--preset--color--line);
+	--spc-radius:16px;
+	--spc-shadow:0 1px 2px rgba(15,17,21,.04),0 8px 24px rgba(15,17,21,.06);
+	--spc-shadow-lg:0 2px 4px rgba(15,17,21,.06),0 16px 40px rgba(15,17,21,.12);
+}
+/* Sections touch each other; spacing comes from .section padding */
+.wp-site-blocks>*+*{margin-block-start:0}
+.section{padding-block:clamp(3rem,7vw,5.5rem)}
+.section--soft{background:var(--spc-soft)}
+.section--dark{background:var(--spc-dark);color:#d7dbe2}
+.section--dark :is(h1,h2,h3,h4){color:#fff}
+.section--dark a:not(.wp-block-button__link){color:#c4b5fd}
+.section--dark .wp-block-button__link{background:#fff;color:var(--spc-ink)}
+.section--dark .wp-block-button__link:hover{background:var(--spc-tint);color:var(--spc-accent-dark)}
+.section-head{max-width:46rem;margin-bottom:2.5rem}
+.section-head h2{margin-top:.25rem}
+.eyebrow{font-size:.8125rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--spc-accent);margin-bottom:.75rem}
+.section--dark .eyebrow{color:#c4b5fd}
+.lead{font-size:var(--wp--preset--font-size--sp-lead);color:var(--spc-text)}
+
+/* Buttons */
+.wp-block-button__link{transition:background-color .2s,color .2s,transform .2s,box-shadow .2s}
+.wp-block-button__link:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(109,40,217,.25)}
+.wp-block-button.is-style-outline .wp-block-button__link{background:transparent;color:var(--spc-ink);border:2px solid var(--spc-ink)}
+.wp-block-button.is-style-outline .wp-block-button__link:hover{background:var(--spc-ink);color:#fff;box-shadow:none}
+.section--dark .wp-block-button.is-style-outline .wp-block-button__link{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.section--dark .wp-block-button.is-style-outline .wp-block-button__link:hover{background:#fff;color:var(--spc-ink)}
+
+/* Accessibility */
+:where(a,button,input,.wp-block-button__link):focus-visible{outline:3px solid var(--spc-accent);outline-offset:3px;border-radius:6px}
+mark.hl{background:none;color:var(--spc-accent);background-image:linear-gradient(100deg,var(--spc-accent),#2563eb);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
