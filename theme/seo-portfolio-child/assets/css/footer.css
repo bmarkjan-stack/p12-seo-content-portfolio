@@ -1,0 +1,15 @@
+/* CTA band + footer */
+.cta-band{text-align:center}
+.cta-band__inner{max-width:44rem;margin-inline:auto}
+.cta-band h2{margin-bottom:.75rem}
+.cta-band .wp-block-buttons{justify-content:center;margin-top:1.75rem}
+.site-footer{background:var(--spc-soft);padding-block:3.5rem 2rem;font-size:.95rem}
+.site-footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}
+.site-footer__grid>*{margin-block:0!important}
+.site-footer h2,.site-footer h3{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.9rem;color:var(--spc-ink)}
+.site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+.site-footer a{color:var(--spc-text);text-decoration:none}
+.site-footer a:hover{color:var(--spc-accent);text-decoration:underline}
+.site-footer .wp-block-site-title{font-weight:800;font-size:1.15rem}
+.site-footer__legal{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--spc-line);font-size:.85rem;color:#4b5563}
+@media(max-width:800px){.site-footer__grid{grid-template-columns:1fr}}
