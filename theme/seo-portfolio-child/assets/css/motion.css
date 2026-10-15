@@ -1,0 +1,9 @@
+/* Scroll reveal. Only active when JS has added .js to <html>, so the editor and no-JS visitors see everything. */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.is-visible{opacity:1;transform:none}
+.js .card-grid .reveal:nth-child(2){transition-delay:.08s}
+.js .card-grid .reveal:nth-child(3){transition-delay:.16s}
+@media (prefers-reduced-motion:reduce){
+	*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+	.js .reveal{opacity:1;transform:none}
+}
