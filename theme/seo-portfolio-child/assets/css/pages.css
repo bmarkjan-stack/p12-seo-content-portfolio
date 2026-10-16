@@ -1,0 +1,15 @@
+/* Inner pages: intro band, card variants, services list, contact */
+.page-intro{padding-top:clamp(3.5rem,8vw,6rem);max-width:52rem}
+.page-intro h1{margin-bottom:.75rem}
+.page-intro .lead{margin-top:0}
+.card-grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:800px){.card-grid--2{grid-template-columns:1fr}}
+.service-list{display:grid;gap:1.75rem}
+.service-item{padding-top:1rem;border-top:1px solid var(--spc-line)}
+.service-item>*{margin-block:0!important}
+.service-item h4{font-size:1.05rem;font-weight:700;margin:.35rem 0 .3rem}
+.service-item p{font-size:.95rem;margin:0}
+.contact-form{padding-block:clamp(3rem,7vw,5.5rem);max-width:44rem}
+.contact-form>*{margin-block:0!important}
+.contact-form h2{margin-bottom:1.5rem}
+.card a{word-break:break-word}

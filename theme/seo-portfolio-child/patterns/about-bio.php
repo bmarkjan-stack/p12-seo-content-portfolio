@@ -18,7 +18,7 @@ $contact = esc_url( home_url( '/contact/' ) );
 
 <!-- wp:group {"className":"about__copy reveal"} -->
 <div class="wp-block-group about__copy reveal"><!-- wp:paragraph {"className":"eyebrow"} -->
-<p class="eyebrow">About</p>
+<p class="eyebrow">Profile</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->

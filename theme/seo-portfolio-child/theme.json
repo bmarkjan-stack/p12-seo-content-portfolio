@@ -1,6 +1,11 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
+	"customTemplates": [
+    	{ "name": "page-about", "title": "About", "postTypes": [ "page" ] },
+    	{ "name": "page-services", "title": "Services", "postTypes": [ "page" ] },
+	   	{ "name": "page-contact", "title": "Contact", "postTypes": [ "page" ] }
+	],
 	"settings": {
 		"appearanceTools": true,
 		"layout": {

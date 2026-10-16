@@ -6,7 +6,7 @@
 defined( 'ABSPATH' ) || exit;
 
 function spc_css_parts() {
-	return array( 'base', 'header', 'hero', 'cards', 'featured', 'blog', 'footer', 'motion' );
+	return array( 'base', 'header', 'hero', 'cards', 'featured', 'blog', 'pages', 'footer', 'motion' );
 }
 
 function spc_collect_css() {
