@@ -12,9 +12,6 @@ $a = esc_url( spc_article_url( 'best-website-features-for-small-businesses' ) );
 $b = esc_url( spc_article_url( 'how-to-build-a-responsive-website' ) );
 $c = esc_url( spc_article_url( 'rest-api-guide' ) );
 
-
-
-
 ?>
 <!-- wp:group {"align":"full","className":"section section--soft","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull section section--soft"><!-- wp:group {"align":"wide"} -->
@@ -39,16 +36,16 @@ $c = esc_url( spc_article_url( 'rest-api-guide' ) );
 <!-- /wp:html -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Web Development</h3>
+<h3 class="wp-block-heading">Small Business Websites</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph -->
-<p>Practical concepts for building modern websites and web applications.</p>
-<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Small Business Websites</h3>
+<!-- /wp:heading -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo $a; ?>">Learn More</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo $a; ?>">Read the article</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
@@ -59,16 +56,16 @@ $c = esc_url( spc_article_url( 'rest-api-guide' ) );
 <!-- /wp:html -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Responsive Web Design</h3>
+<h3 class="wp-block-heading">Responsive Website Design</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>How sites adapt to any screen size for a better experience on every device.</p>
+<p>A step-by-step guide to building one layout that adapts to phones, tablets and desktops.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo $b; ?>">Learn More</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo $b; ?>">Read the article</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
@@ -79,16 +76,16 @@ $c = esc_url( spc_article_url( 'rest-api-guide' ) );
 <!-- /wp:html -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Technical Topics</h3>
+<h3 class="wp-block-heading">REST APIs</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Accessible explanations of APIs, databases and development concepts.</p>
+<p>Plain-language explanations of APIs, how web apps request data, and the concepts behind them.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo $c; ?>">Learn More</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo $c; ?>">Read the article</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
