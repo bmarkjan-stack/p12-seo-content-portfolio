@@ -1,0 +1,70 @@
+
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"page-main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group page-main">
+	<!-- wp:group {"align":"wide","className":"article-head"} -->
+	<div class="wp-block-group alignwide article-head">
+		<!-- wp:group {"className":"post-card__meta","layout":{"type":"flex","flexWrap":"wrap"}} -->
+		<div class="wp-block-group post-card__meta">
+			<!-- wp:post-terms {"term":"category","className":"post-card__cat"} /-->
+
+			<!-- wp:post-date {"className":"post-card__date"} /-->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:post-title {"level":1} /-->
+
+		<!-- wp:post-featured-image {"align":"wide","aspectRatio":"16/9","className":"article-hero"} /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+	<!-- wp:group {"align":"full","className":"section section--soft related","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull section section--soft related">
+		<!-- wp:group {"align":"wide"} -->
+		<div class="wp-block-group alignwide">
+			<!-- wp:group {"className":"section-head"} -->
+			<div class="wp-block-group section-head">
+				<!-- wp:paragraph {"className":"eyebrow"} -->
+				<p class="eyebrow">Keep reading</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:heading -->
+				<h2 class="wp-block-heading">More from the blog</h2>
+				<!-- /wp:heading -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- wp:query {"queryId":21,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
+			<div class="wp-block-query">
+				<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+					<!-- wp:group {"className":"post-card reveal","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+					<div class="wp-block-group post-card reveal">
+						<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9"} /-->
+
+						<!-- wp:group {"className":"post-card__body"} -->
+						<div class="wp-block-group post-card__body">
+							<!-- wp:post-terms {"term":"category","className":"post-card__cat"} /-->
+
+							<!-- wp:post-title {"level":3,"isLink":true,"className":"post-card__title"} /-->
+
+							<!-- wp:post-excerpt {"excerptLength":22,"className":"post-card__excerpt"} /-->
+
+							<!-- wp:read-more {"content":"Read article"} /-->
+						</div>
+						<!-- /wp:group -->
+					</div>
+					<!-- /wp:group -->
+				<!-- /wp:post-template -->
+			</div>
+			<!-- /wp:query -->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
