@@ -1,16 +1,128 @@
-/* Inner pages: intro band, card variants, services list, contact */
-.page-intro{padding-top:clamp(3.5rem,8vw,6rem);max-width:52rem}
-.page-intro h1{margin-bottom:.75rem}
-.page-intro .lead{margin-top:0}
-.card-grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}
-@media(max-width:800px){.card-grid--2{grid-template-columns:1fr}}
-.service-list{display:grid;gap:1.75rem}
-.service-item{padding-top:1rem;border-top:1px solid var(--spc-line)}
-.service-item>*{margin-block:0!important}
-.service-item h4{font-size:1.05rem;font-weight:700;margin:.35rem 0 .3rem}
-.service-item p{font-size:.95rem;margin:0}
-.contact-form{padding-block:clamp(3rem,7vw,5.5rem);max-width:44rem}
-.contact-form>*{margin-block:0!important}
-.contact-form h2{margin-bottom:1.5rem}
-.card a{word-break:break-word}
-.services-cta {margin-top: 2.5rem;}
+
+/* Inner pages: services, contact and shared page polish */
+
+/* Eyebrow labels with a leading accent rule */
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 1.5rem;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+}
+
+/* About: two-column cards with mobile stacking */
+.card-grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 800px) {
+    .card-grid--2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Services: accent-topped cards with dot-style lists */
+.services-grid > .card {
+    position: relative;
+    overflow: hidden;
+    padding: 2.5rem 2rem 2.25rem;
+}
+
+.services-grid > .card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        var(--spc-accent),
+        #2563eb
+    );
+}
+
+.services-grid > .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.services-grid > .card > p {
+    color: var(--spc-text);
+    font-size: 0.98rem;
+}
+
+.services-grid .wp-block-list {
+    list-style: none;
+    padding: 1.1rem 0 0;
+    margin: 1rem 0 0 !important;
+    display: grid;
+    gap: 0.7rem;
+    border-top: 1px solid var(--spc-line);
+}
+
+.services-grid .wp-block-list li {
+    position: relative;
+    padding-left: 1.4rem;
+    font-weight: 500;
+    color: var(--spc-ink);
+}
+
+.services-grid .wp-block-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--spc-accent);
+}
+
+/* Services call to action */
+.services-cta {
+    margin-top: 2.5rem;
+}
+
+/* Contact: centered column and bordered form panel */
+.contact-form {
+    padding-block: clamp(3.5rem, 8vw, 6rem);
+}
+
+.contact-form > .wp-block-group {
+    max-width: 44rem;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.contact-form h2 {
+    margin-bottom: 0.5rem;
+}
+
+.contact-form .wp-block-post-content {
+    text-align: left;
+    margin-top: 2rem;
+    background: #fff;
+    border: 1px solid var(--spc-line);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--spc-shadow-lg);
+}
+
+.contact-form > * {
+    margin-block: 0 !important;
+}
+
+/* Contact details card spacing */
+.contact-details .card-grid {
+    gap: 1.25rem;
+}
+
+/* Prevent long links from overflowing cards */
+.card a {
+    word-break: break-word;
+}
