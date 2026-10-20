@@ -7,9 +7,14 @@
  * Keywords: services, cards, features
  * Viewport Width: 1400
  */
-$a = esc_url( home_url( '/best-website-features-small-businesses/' ) );
-$b = esc_url( home_url( '/how-to-build-a-responsive-website/' ) );
-$c = esc_url( home_url( '/rest-api-guide/' ) );
+
+$a = esc_url( spc_article_url( 'best-website-features-for-small-businesses' ) );
+$b = esc_url( spc_article_url( 'how-to-build-a-responsive-website' ) );
+$c = esc_url( spc_article_url( 'rest-api-guide' ) );
+
+
+
+
 ?>
 <!-- wp:group {"align":"full","className":"section section--soft","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull section section--soft"><!-- wp:group {"align":"wide"} -->

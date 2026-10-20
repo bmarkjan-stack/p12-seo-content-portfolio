@@ -7,9 +7,9 @@
  * Keywords: portfolio, case study, work
  * Viewport Width: 1400
  */
-$s1 = esc_url( home_url( '/how-to-build-a-responsive-website/' ) );
-$s2 = esc_url( home_url( '/best-website-features-small-businesses/' ) );
-$s3 = esc_url( home_url( '/rest-api-guide/' ) );
+$s1 = esc_url( spc_article_url( 'how-to-build-a-responsive-website' ) );
+$s2 = esc_url( spc_article_url( 'best-website-features-for-small-businesses' ) );
+$s3 = esc_url( spc_article_url( 'rest-api-guide' ) );
 ?>
 <!-- wp:group {"align":"full","className":"section section--soft","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull section section--soft"><!-- wp:group {"align":"wide"} -->
