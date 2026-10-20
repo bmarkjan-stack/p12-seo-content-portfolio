@@ -126,3 +126,82 @@
 .card a {
     word-break: break-word;
 }
+
+
+/* Single article: heading spacing and typography */
+.article-head {
+    padding-block: clamp(2.5rem, 5vw, 4rem) 2rem;
+}
+
+.article-head h1 {
+    max-width: 900px;
+    margin-block: 1rem 1.5rem;
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+}
+
+/* Single article: featured image */
+.article-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--spc-shadow-lg);
+}
+
+/* Single article: related posts section */
+.related {
+    margin-top: clamp(3rem, 7vw, 6rem);
+    padding-block: clamp(3rem, 7vw, 5rem);
+}
+
+.related .section-head {
+    margin-bottom: 2rem;
+}
+
+/* About: add breathing room around the bio and principles */
+.about__grid {
+    gap: clamp(2rem, 5vw, 4rem);
+}
+
+.about__copy {
+    padding-block: 1rem;
+}
+
+.about__list {
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+/* About: improve spacing for two-column cards */
+.card-grid--2 {
+    gap: 1.5rem;
+}
+
+.card-grid--2 > .card {
+    padding: 2rem;
+}
+
+@media (max-width: 800px) {
+    .article-head {
+        padding-block: 2rem 1.25rem;
+    }
+
+    .article-head h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .article-hero img {
+        border-radius: 14px;
+    }
+
+    .related {
+        margin-top: 3rem;
+        padding-block: 3rem;
+    }
+
+    .card-grid--2 > .card {
+        padding: 1.5rem;
+    }
+}
