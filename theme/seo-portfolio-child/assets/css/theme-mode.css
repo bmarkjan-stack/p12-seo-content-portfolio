@@ -1,0 +1,90 @@
+
+/* Light and dark tokens.
+   Dark is the default when data-theme is absent or set to dark.
+   Light applies when data-theme="light". */
+
+:root {
+    --spc-surface: #ffffff;
+    --spc-header: rgba(255, 255, 255, 0.82);
+    --primary-color: #6d28d9;
+    --spc-toggle-bg: #ffffff;
+}
+
+html:not([data-theme="light"]) {
+    --spc-surface: #13161d;
+    --spc-header: rgba(15, 17, 21, 0.82);
+    --primary-color: #a78bfa;
+    --spc-toggle-bg: #1b1f29;
+
+    --wp--preset--color--surface: #0f1115;
+    --wp--preset--color--ink: #f4f5f7;
+    --wp--preset--color--ink-soft: #b8bfcc;
+    --wp--preset--color--surface-soft: #161a22;
+    --wp--preset--color--line: #2a303c;
+    --wp--preset--color--accent: #a78bfa;
+    --wp--preset--color--accent-dark: #c4b5fd;
+    --wp--preset--color--accent-tint: #221a3f;
+    --wp--preset--color--dark: #07080b;
+
+    color-scheme: dark;
+}
+
+html[data-theme="light"] {
+    color-scheme: light;
+}
+
+html {
+    background: var(--wp--preset--color--surface);
+}
+
+body {
+    background: var(--wp--preset--color--surface);
+    color: var(--wp--preset--color--ink-soft);
+}
+
+input,
+textarea,
+select {
+    background: var(--spc-surface);
+    color: var(--spc-ink);
+}
+
+/* Theme toggle in the header */
+.theme-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    flex: none;
+    margin-left: 0.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--spc-line);
+    background: var(--spc-toggle-bg);
+    color: var(--spc-ink);
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+    border-color: var(--spc-accent);
+    transform: translateY(-1px);
+}
+
+.theme-toggle svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.theme-toggle[aria-pressed="true"] .icon-moon {
+    display: none;
+}
+
+.theme-toggle[aria-pressed="false"] .icon-sun {
+    display: none;
+}

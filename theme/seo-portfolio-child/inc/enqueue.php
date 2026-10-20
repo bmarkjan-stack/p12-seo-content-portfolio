@@ -6,19 +6,26 @@
 defined( 'ABSPATH' ) || exit;
 
 function spc_css_parts() {
-	return array( 'base', 'header', 'hero', 'cards', 'featured', 'blog', 'pages', 'footer', 'motion' );
+    return array( 'base', 'theme-mode', 'header', 'hero', 'cards', 'featured', 'blog', 'pages', 'footer', 'motion' );
 }
 
-function spc_collect_css() {
-	$css = '';
-	foreach ( spc_css_parts() as $part ) {
-		$file = get_theme_file_path( "assets/css/{$part}.css" );
-		if ( is_readable( $file ) ) {
-			$css .= file_get_contents( $file ) . "\n";
-		}
-	}
-	$css = preg_replace( '!/\*.*?\*/!s', '', $css );
-	return trim( preg_replace( '/\s+/', ' ', $css ) );
+
+function spc_collect_css( $skip = array() ) {
+    $css = '';
+
+    foreach ( spc_css_parts() as $part ) {
+        if ( in_array( $part, $skip, true ) ) {
+            continue;
+        }
+
+        $file = get_theme_file_path( "assets/css/{$part}.css" );
+
+        if ( is_readable( $file ) ) {
+            $css .= file_get_contents( $file ) . "\n";
+        }
+    }
+    $css = preg_replace( '!/\*.*?\*/!s', '', $css );
+    return trim( preg_replace( '/\s+/', ' ', $css ) );
 }
 
 add_action( 'wp_head', function () {
@@ -43,9 +50,9 @@ add_action( 'wp_enqueue_scripts', function () {
 	}
 } );
 
-// Same CSS inside the block editor so it matches the front end.
+/* Same CSS inside the block editor so it matches the front end. */
 add_filter( 'block_editor_settings_all', function ( $settings ) {
-	$css = spc_collect_css();
+	$css = spc_collect_css( array( 'theme-mode' ) );
 	if ( $css ) {
 		$settings['styles'][] = array( 'css' => $css );
 	}
