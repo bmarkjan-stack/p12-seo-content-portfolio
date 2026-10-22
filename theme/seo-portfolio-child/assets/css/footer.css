@@ -11,5 +11,5 @@
 .site-footer a{color:var(--spc-text);text-decoration:none}
 .site-footer a:hover{color:var(--spc-accent);text-decoration:underline}
 .site-footer .wp-block-site-title{font-weight:800;font-size:1.15rem}
-.site-footer__legal{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--spc-line);font-size:.85rem;color:#4b5563}
+.site-footer__legal{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--spc-line);font-size:.85rem;color: var(--spc-text)}
 @media(max-width:800px){.site-footer__grid{grid-template-columns:1fr}}
