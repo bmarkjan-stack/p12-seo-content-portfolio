@@ -1,9 +1,11 @@
-
 <?php
 /**
  * Dark mode by default, with a visitor-chosen light mode.
- * Sets data-theme on the html element before the first paint.
+ *
+ * Sets data-theme on the html element before the first paint
+ * and prints the binary wave canvas at the end of the page.
  */
+
 defined( 'ABSPATH' ) || exit;
 
 add_action( 'wp_head', function () {
@@ -27,3 +29,7 @@ add_action( 'wp_head', function () {
     </script>
     <?php
 }, 0 );
+
+add_action( 'wp_footer', function () {
+    echo '<canvas id="binary-wave" aria-hidden="true"></canvas>' . "\n";
+} );

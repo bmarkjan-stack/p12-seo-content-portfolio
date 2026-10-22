@@ -42,7 +42,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		wp_enqueue_style( 'spc-article', get_theme_file_uri( 'assets/css/article.css' ), array( 'spc-style' ), filemtime( $article ) );
 	}
 
-	foreach ( array( 'header', 'reveal', 'theme-mode' ) as $script ) {
+	foreach ( array( 'header', 'reveal', 'theme-mode', 'binary-wave' ) as $script ) {
 		$path = get_theme_file_path( "assets/js/{$script}.js" );
 		if ( is_readable( $path ) ) {
 			wp_enqueue_script( "spc-{$script}", get_theme_file_uri( "assets/js/{$script}.js" ), array(), filemtime( $path ), array( 'strategy' => 'defer', 'in_footer' => true ) );
