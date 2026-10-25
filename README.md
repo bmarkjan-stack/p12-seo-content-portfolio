@@ -1,58 +1,77 @@
 # SEO Content & Web Development Portfolio
 
-A WordPress-based SEO content portfolio demonstrating content research, search intent analysis, keyword research, SEO writing, WordPress publishing, responsive web design, and web development.
+A WordPress portfolio that shows SEO content work from start to finish: search intent research, keyword research, outlines, SEO briefs and metadata, articles, WordPress publishing, a custom child theme, and a small Flask REST API that supports one of the articles.
 
-## Project Overview
+![SEO Content & Web Development Portfolio live demo](live-demo/seo-content-portfolio-live-demo.gif)
 
-This project contains three SEO content samples developed and published within a single WordPress website.
+---
 
-The samples demonstrate different content purposes and search intents while using one consistent website structure.
+## Table of Contents
+
+- [What This Portfolio Shows](#what-this-portfolio-shows)
+- [Content Samples](#content-samples)
+- [SEO Workflow](#seo-workflow)
+- [WordPress Implementation](#wordpress-implementation)
+- [Child Theme](#child-theme)
+- [REST API Demo](#rest-api-demo)
+- [Technologies](#technologies)
+- [Project Structure](#project-structure)
+- [WordPress Site Structure](#wordpress-site-structure)
+- [Known Limitations](#known-limitations)
+- [License](#license)
+
+---
+
+## What This Portfolio Shows
+
+The three content samples each target a different search intent, and they are all published on one WordPress site, so the work can be compared side by side. The repository holds the research, briefs, and drafts behind each article, along with the theme and the demo code that the articles refer to.
+
+| Area | Where to look |
+| --- | --- |
+| Search intent and keyword research | `research/` |
+| Outlines, SEO briefs, and metadata | `research/`, `seo/` |
+| Published articles (Markdown drafts) | `content/` |
+| WordPress publishing notes and checklists | `wordpress/` |
+| Custom WordPress child theme | `theme/seo-portfolio-child/` |
+| Flask REST API demo | `api-demo/` |
+| Process documentation | `docs/workflow.md` |
+
+---
 
 ## Content Samples
 
-### Sample 1 — Informational
+### Sample 1: Informational
 
 **How to Build a Responsive Website**
 
-Demonstrates:
-
 - Informational search intent
-- Keyword research
-- Educational content
-- SEO-friendly headings
+- Keyword research and an outline built around it
+- Educational content with SEO-friendly headings
 - Responsive web development concepts
 
-### Sample 2 — Commercial / Investigational
+### Sample 2: Commercial and Investigational
 
 **Best Website Features for Small Businesses**
-
-Demonstrates:
 
 - Commercial search intent
 - Comparison-style content
 - Structured recommendations
-- SEO-friendly formatting
 - Business-focused web content
 
-### Sample 3 — Technical
+### Sample 3: Technical
 
 **What Is a REST API and How Does It Work?**
 
-Demonstrates:
+- Technical writing for an informational query
+- REST concepts: HTTP methods, endpoints, JSON, and status codes
+- A working Flask API that the article's examples are based on
+- Technical publishing on WordPress
 
-- Technical content writing
-- Informational search intent
-- REST API concepts
-- HTTP methods
-- API endpoints
-- JSON
-- HTTP status codes
-- Practical Flask API demonstration
-- WordPress technical publishing
+---
 
 ## SEO Workflow
 
-Each content sample follows a documented workflow:
+Each sample goes through the same steps. The full process is in [`docs/workflow.md`](docs/workflow.md).
 
 1. Search intent research
 2. Keyword research
@@ -65,116 +84,116 @@ Each content sample follows a documented workflow:
 9. Responsive testing
 10. Content review
 
+---
+
 ## WordPress Implementation
 
-All three content samples are published within the same WordPress website.
+All three articles are WordPress posts on the same site. They use:
 
-The WordPress implementation demonstrates:
-
-- WordPress Posts
 - Gutenberg blocks
-- Categories
-- Tags
+- Categories and tags
 - Featured images
-- Internal links
-- SEO metadata
-- Code blocks
-- Tables
+- Internal links between the articles
+- SEO metadata for titles and descriptions
+- Code blocks and tables
 - Responsive content formatting
 
-## Technical Demonstration
+The publishing notes for each sample are in `wordpress/`, and the design changes made in the second version of the site are recorded in [`wordpress/redesign-log.md`](wordpress/redesign-log.md).
 
-Sample 3 includes a small Flask REST API demonstrating the concepts explained in the article.
+---
 
-The API provides the following endpoints:
+## Child Theme
+
+`theme/seo-portfolio-child/` is a child theme of Twenty Twenty-Five. It is the source of the site's design:
+
+- **Design tokens** in `theme.json`, with a violet accent and neutral palette
+- **Light and dark modes** with a saved toggle
+- **Block patterns** for the hero, service cards, featured article, case studies, and contact details
+- **Templates** for the front page, blog, archives, single articles, and the About, Services, and Contact pages
+- **Light motion**: a reveal-on-scroll effect and a header that responds to scrolling
+- **Helpers** in `inc/`, for example to set up the navigation, related posts, and excerpts
+
+**Requirements:** WordPress 6.6 or later, PHP 7.4 or later, and the Twenty Twenty-Five parent theme.
+
+To install it, copy the folder into `wp-content/themes/`, then activate **SEO Portfolio Child**. The redesign log has the full checklist, including the reading settings (a static home page and a separate blog page).
+
+---
+
+## REST API Demo
+
+Sample 3 includes a small Flask API for an in-memory product list. It has the five standard operations:
 
 ```text
-GET /api/products
-GET /api/products/<id>
-POST /api/products
-PUT /api/products/<id>
+GET    /api/products
+GET    /api/products/<id>
+POST   /api/products
+PUT    /api/products/<id>
 DELETE /api/products/<id>
 ```
 
-The API demonstrates:
+It returns `200`, `201`, `400`, and `404`, and it checks that `name` and `price` are present when a product is created. It is an educational demonstration and is not intended for production use.
 
-- HTTP methods
-- API endpoints
-- JSON responses
-- HTTP status codes
-- Basic input validation
-- Client-server communication
+To run it:
 
-The API is an educational demonstration and is not intended for production use.
+```bash
+cd api-demo
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
+```
+
+The server starts at `http://127.0.0.1:5000`. Example request:
+
+```bash
+curl -X POST http://127.0.0.1:5000/api/products \
+  -H "Content-Type: application/json" \
+  -d '{"name": "Monitor", "price": 12000}'
+```
+
+Details for each endpoint are in [`api-demo/README.md`](api-demo/README.md). Screenshots of the requests are in `images/sample-3/screenshots/`.
+
+---
 
 ## Technologies
 
-- WordPress
-- LocalWP
-- Python
-- Flask
-- HTTP
-- JSON
-- HTML
-- CSS
-- Markdown
-- Git
-- GitHub
-- Thunder Client 
+- WordPress and LocalWP for local development
+- PHP, HTML, CSS, and JavaScript for the child theme
+- Python and Flask for the API demo
+- HTTP, JSON, and REST concepts
+- Markdown for research, briefs, and drafts
+- Git and GitHub
+- Thunder Client for testing API requests
+
+---
 
 ## Project Structure
 
 ```text
 p12-seo-content-portfolio/
-├── .gitignore
-├── assets/
-│   └── css/
-│       └── custom.css
-├── content/
-│   ├── how-to-build-a-responsive-website.md
-│   ├── best-website-features-small-businesses.md
-│   └── what-is-a-rest-api-and-how-does-it-work.md
-├── research/
-│   ├── sample-1-content-outline.md
-│   ├── sample-1-keyword-research.md
-│   ├── sample-1-search-intent.md
-│   ├── sample-2-content-outline.md
-│   ├── sample-2-keyword-research.md
-│   ├── sample-2-search-intent.md
-│   ├── sample-3-content-outline.md
-│   ├── sample-3-keyword-research.md
-│   └── sample-3-search-intent.md
-├── seo/
-│   ├── sample-1-seo-brief.md
-│   ├── sample-1-seo-metadata.md
-│   ├── sample-2-seo-brief.md
-│   ├── sample-2-seo-metadata.md
-│   ├── sample-3-seo-brief.md
-│   └── sample-3-seo-metadata.md
-├── wordpress/
-│   ├── sample-1-wordpress.md
-│   ├── sample-2-wordpress.md
-│   └── sample-3-wordpress.md
-├── api-demo/
+├── api-demo/                # Flask REST API for Sample 3
 │   ├── app.py
 │   ├── requirements.txt
 │   └── README.md
+├── content/                 # the three articles (Markdown)
+├── docs/
+│   └── workflow.md          # the SEO workflow
 ├── images/
-│   └── sample-3/
-│       ├── rest-api-flow-diagram.svg
-│       ├── rest-api-flow-diagram.png
-│       ├── rest-api-featured-image.svg
-│       ├── rest-api-featured-image.png
-│       └── screenshots/
-│           ├── 01-get-all-products.png.png
-│           ├── 02-get-single-product.png.png
-│           ├── 03-create-product-post.png.png
-│           ├── 04-update-product-put.png.png
-│           ├── 05-verify-updated-product.png.png
-│           ├── 06-delete-product.png.png
-│           └── 07-verify-deleted-product.png.png
+│   ├── site/                # site imagery
+│   ├── sample-1/            # Sample 1 images
+│   ├── sample-2/            # Sample 2 screenshots of the Luna Café project
+│   └── sample-3/            # featured image, flow diagram, and API request screenshots
+├── research/                # search intent, keyword research, and outlines for each sample
+├── seo/                     # SEO briefs and metadata for each sample
+├── theme/
+│   └── seo-portfolio-child/ # WordPress child theme
+├── wordpress/               # publishing notes for each sample, and the redesign log
+├── .gitignore
+├── .gitattributes
 └── README.md
 ```
+
+---
 
 ## WordPress Site Structure
 
@@ -183,7 +202,7 @@ WordPress Website
 │
 ├── Home
 ├── About
-├── Projects
+├── Services
 ├── Blog
 │   ├── How to Build a Responsive Website
 │   ├── Best Website Features for Small Businesses
@@ -191,6 +210,25 @@ WordPress Website
 └── Contact
 ```
 
-## Project Objective
+---
 
-The project demonstrates the ability to combine SEO research, content writing, WordPress publishing, responsive web development, and technical development knowledge within one website.
+## Known Limitations
+
+- **Demo API only.** The Flask API stores products in memory, so all changes are lost when the server restarts.
+- **Duplicate IDs after a delete.** New products get the ID `number of products + 1`. If a product is deleted, the next product can receive an ID that is already in use. For example, after deleting product 1 from a list of two, a new product gets ID 2, which duplicates the existing one. This is a known bug in the demo, and the fix is to use a counter that only increases.
+- **Limited validation.** The API checks that `name` and `price` are present, but it doesn't check their types or values.
+- **Debug mode.** `app.py` runs with `debug=True`, which is for local use only.
+- **Virtual environment in the archive.** `api-demo/venv/` is excluded by `.gitignore`, so it should not be committed. If a copy of the project includes it, delete it before sharing.
+- **Local WordPress setup.** The site was built in LocalWP. Recreating it requires the parent theme and the manual checklist in the redesign log.
+
+---
+
+## License
+
+The license for this repository is still to be decided.
+
+---
+
+## Author
+
+Created by [bmarkjan-stack](https://github.com/bmarkjan-stack) as a portfolio project. Website: <https://bmarkjan-stack.github.io>
