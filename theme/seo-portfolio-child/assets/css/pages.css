@@ -106,11 +106,11 @@
 .contact-form .wp-block-post-content {
     text-align: left;
     margin-top: 2rem;
-    background: #fff;
+    background: var(--spc-surface);
+    color: var(--spc-ink);
     border: 1px solid var(--spc-line);
     border-radius: 20px;
     padding: 2rem;
-    box-shadow: var(--spc-shadow-lg);
 }
 
 .contact-form > * {
@@ -204,4 +204,19 @@
     .card-grid--2 > .card {
         padding: 1.5rem;
     }
+}
+
+/* Form plugins inside the Contact panel: fields follow the active mode */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    background: var(--spc-surface);
+    color: var(--spc-ink);
+    border: 1px solid var(--spc-line);
+}
+
+.contact-form button,
+.contact-form input[type="submit"] {
+    background: var(--spc-ink);
+    color: var(--spc-surface);
 }
